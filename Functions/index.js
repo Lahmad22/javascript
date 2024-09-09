@@ -20,12 +20,38 @@ function functionName (parameters){
  }
  sayMyName('Goodluck')
 
+ - 2
+ function calculate(n1, operation, n2){
+    switch(operation){
+        case 'add':
+            return n1 + n2;
+        case 'subtract':
+            return n1 - n2;
+        case 'multiply':
+            return n1 * n2;
+        case 'divide':
+            if(n2 !== 0){
+                return n1/n2;
+            } else{
+                return 'Error: division by zero';
+            }
+        default:
+            return 'invalid operation!';
+    }
+ }
+ console.log(calculate(10, 'add', 2))
+ console.log(calculate(10, 'subtract', 2))
+ console.log(calculate(10, 'multiply', 2))
+ console.log(calculate(10, 'divide', 2))
+ console.log(calculate(10, 'divide', 0))
+
  /* Assignment
 1. function to calcuate two values
 use add ( 2 , add , 3)
 use multiply ( 2, multiply, 3)
 */
 
+/*
 const operations = {
     add: (a, b) => a + b,
     subtract: (a, b) => a - b,
@@ -43,4 +69,4 @@ const operations = {
   console.log(calculate(10, 'divide', 2))
   console.log(calculate(10, 'divide', 0))
   console.log(calculate(10, 'modulus', 2))
-  
+  */
