@@ -1,7 +1,7 @@
 /*FUNCTIONS
     block of code designed to perform a task
 
-- callback funtion
+- callback funtion - calling back function inside of a function
 - method : a function in a class
 - scope : function that accept global variables
 - parameter : a variable passed when declaring a function
@@ -70,3 +70,67 @@ const operations = {
   console.log(calculate(10, 'divide', 0))
   console.log(calculate(10, 'modulus', 2))
   */
+
+  // 3
+/*
+function calculator(nmb1, operator, nmb2){
+    if (operator == '+' || operator == 'addition'){
+        return nmb1 + nmb2
+    } else if(operator == '-' || operator == 'substraction'){
+        return nmb1 - nmb2
+    } else if(operator == '*' || operator == 'multiplication'){
+        return nmb1 * nmb2
+    } else if(operator == '/' || operator == 'division'){
+        return nmb1 / nmb2
+    } else if(operator == '%' || operator == 'modulus'){
+        return nmb1 % nmb2
+    }else{
+        return "Use a correct operator"
+    }
+  }
+    console.log(calculator(20, '+', 5))
+    console.log(calculator(20, '-', 5))
+    console.log(calculator(20, '*', 5))
+    console.log(calculator(20, '/', 5))
+    console.log(calculator(20, '%', 5))
+    
+// 4
+  let userInputNumber = parseFloat(prompt("Enter first number"))
+  let nmb1 = userInputNumber
+
+  let userInputNumber2 = parseFloat(prompt("Enter second number"))
+  let nmb2 = userInputNumber
+
+  let userInputOperator = prompt("give operator (addition, subtraction, multiplication, division, modulus):")
+  let operator = userInputOperator
+
+  function calculator(nmb1, operator, nmb2){
+    if (operator == '+' || operator == 'addition'){
+        return nmb1 + nmb2
+    } else if(operator == '-' || operator == 'substraction'){
+        return nmb1 - nmb2
+    } else if(operator == '*' || operator == 'multiplication'){
+        return nmb1 * nmb2
+    } else if(operator == '/' || operator == 'division'){
+        return nmb1 / nmb2
+    } else{ operator == '%' || operator == 'modulus'
+        return nmb1 % nmb2
+    }
+  }
+    const result = calculator(nmb1, operator, nmb2)
+    console.log(`Result is ${result}`) */
+
+    // Assignment
+    // simple interest calculator
+
+    function simpleInterest(principal, rate, time) {
+        return (principal * rate * time) / 100;
+    }
+    const principal = parseFloat(prompt('Enter the principal amount:'));
+    const rate = parseFloat(prompt('Enter the interest rate (in %):'));
+    const time = parseFloat(prompt('Enter the time period (in years):'));
+    
+    const interest = simpleInterest(principal, rate, time);
+    console.log(`Simple Interest: ${interest}`);
+    
+    
