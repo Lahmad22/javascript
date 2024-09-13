@@ -44,11 +44,11 @@ console.log(lastAge4)
 // SLICING ARRAY OF OBJECTS
 const studentProfile =[
     {
-    FisrtName:'Ahmad',
+    StudentName:'Ahmad',
     age: 25,
     bestSubject: 'Physics',
     favouriteTeacher: 'Mr bello',
-    hobby:'Cycling',
+    hobby:'watching movies',
     FutureAmbition: 'make money'
     },
     {
@@ -61,7 +61,7 @@ const studentProfile =[
     {
     StudentName:'Amangi',
     age: 24,
-    bestSubject: 'Mathematics',
+    bestSubject: 'ICT',
     hobby:'Gaming (COD)',
     FutureAmbition: 'Software Developer'
     },
@@ -73,3 +73,74 @@ const studentProfile =[
     FutureAmbition: 'Software Developer'
     },
 ]
+
+    studentProfile[1]['StudentName'] = 'Eunice Adams'
+    studentProfile[2].StudentName = 'Amangi Sunday'
+
+
+    console.log(studentProfile[0])
+    console.log(studentProfile[0]['StudentName'])// or
+    console.log(studentProfile[1].StudentName)
+    // to call an item in the object.
+    console.log(studentProfile[2].StudentName)
+    
+// 5
+let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GCLE 2050', 'Audi R8', 
+    'Bentley Continental GT', 'Dodge Challenger', 'Tesla Model S', 'Mclaren 720']
+    console.log(arrayOfCars)
+
+    // POP
+    // removes the last item of an array.
+       arrayOfCars.pop()
+       console.log(arrayOfCars)
+
+    // PUSH
+    // adds an item to the back of the array.
+      arrayOfCars.push('Lamborghini Urus')
+      console.log(arrayOfCars)
+
+    // SHIFT
+    // removes from the first item of an array.
+      arrayOfCars.shift()
+      console.log(arrayOfCars)
+
+    // UNSHIFT 
+    // adds an item to the beginning of an array list.
+      arrayOfCars.unshift('Porche')
+      console.log(arrayOfCars)
+
+      // ASSIGNMENT
+      /* 
+      create array of object with 3 users(password and email)
+      simple function to verify the users(prompt user)
+      alert('password is correct', 'not correct)
+      alert('Welcome user') when successful
+      */
+
+      const users = [
+        { email: 'user1@gmail.com', password: 'password1' },
+        { email: 'user2@gmail.com', password: 'password2' },
+        { email: 'user3@gmail.com', password: 'password3' }
+      ]
+
+      function verifyUser() {
+        const userEmail = prompt('Enter your email(in lowercase):').toLowerCase()
+        const userPassword = prompt('Enter your password:')
+
+        let foundUser = false
+
+        users.forEach(function(user) {
+            
+          if (user.email === userEmail && user.password === userPassword){
+            foundUser = true
+            alert(`Welcome, ${user.email}!`)
+          }
+        })
+      
+        if (!foundUser) {
+          alert('Password is not correct')
+        }
+      }
+      
+      verifyUser()
+      
