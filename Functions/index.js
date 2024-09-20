@@ -122,9 +122,8 @@ function calculator(nmb1, operator, nmb2){
 
     // Assignment
     // simple interest calculator
-
+/*
     // 5
-    /*
     function simpleInterest(principal, rate, time) {
         return (principal * rate * time) / 100;
     }
