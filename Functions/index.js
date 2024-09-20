@@ -123,6 +123,8 @@ function calculator(nmb1, operator, nmb2){
     // Assignment
     // simple interest calculator
 
+    // 5
+    /*
     function simpleInterest(principal, rate, time) {
         return (principal * rate * time) / 100;
     }
@@ -132,5 +134,21 @@ function calculator(nmb1, operator, nmb2){
     
     const interest = simpleInterest(principal, rate, time);
     console.log(`Simple Interest: ${interest}`);
-    
-    
+    */
+    // 6
+    function welcomeMessage(firstname){
+        console.log(`Welcome to the class ${firstname}`)
+    }
+    let firstname = 'Enyi'
+    welcomeMessage()// output undefined
+    // welcomeMessage(firstname) // will output name
+
+    function displayDetails(firstname, age, height){
+         console.log(`Welcome to the class ${firstname}, you are ${age} years old and your height is ${height}`)
+    }
+    let personName = 'Jude'
+    let personAge = 13
+    personHeight = '5ft'
+
+    displayDetails(personName, personAge, personHeight)
+    // function is interested in the index of the parameters and not in the name.

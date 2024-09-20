@@ -138,7 +138,7 @@ let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GC
         })
       
         if (!foundUser) {
-          alert('Password is not correct')
+          alert('Details is/are not correct')
         }
       }
       
