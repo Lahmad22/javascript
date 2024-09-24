@@ -2,7 +2,7 @@
     block of code designed to perform a task
 
 - callback funtion - calling back function inside of a function
-- method : a function in a class
+- method : a function inside a class
 - scope : function that accept global variables
 - parameter : a variable passed when declaring a function
 - argument : a variable passed when calling a function

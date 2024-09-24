@@ -1,5 +1,8 @@
 // ARRAYS
 //An array in JavaScript is a type of global object used to store data.
+// primitive data types; are a set of basic data types from which all other data types are constructed.
+// non-primitive data types; are derived from the primitive data types of the JavaScript language
+// Array property; is an attribute in a class. 'attributes' is a descriptor.
 
 
 // 1
@@ -12,12 +15,16 @@ let arrayOfAge = [9, 12, 10, 8, 6, 7, 5, 15]
 let ArrayOfNames = new Array('Eunice', 'Peter', 'Micheal', 'Amangi', 'Samuel')// Array constructor
 
 //ARRAY METHODS 
+// causes a change in an array.
 console.log(arrayOfAge[5])
 console.log(arrayOfAge[2])
 console.log(arrayOfAge[4])
+console.log(arrayOfAge[-1])
+console.log(typeof(ArrayOfNames))
 
 arrayOfAge[1] = 20
 ArrayOfNames[5] = 'Goodluck'
+ArrayOfNames[0]= 'Ahmad'
 
 console.log(arrayOfAge)
 console.log(ArrayOfNames)
@@ -26,7 +33,6 @@ console.log(ArrayOfNames)
 // ARRAY SLICING
  const firstThreeAges = arrayOfAge.slice(3, 5) // 2 items from index 3
  console.log(firstThreeAges)
-
 
 const lastThreeAges = arrayOfAge.slice(4,7) // 3 items, start with index 4
 const lastAge1 = arrayOfAge.slice(7, 8) // wrong, because we don't have index 8, but works
@@ -90,7 +96,7 @@ let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GC
     console.log(arrayOfCars)
 
     // POP
-    // removes the last item of an array.
+    // removes(forceful) the last item of an array.
        arrayOfCars.pop()
        console.log(arrayOfCars)
 
@@ -109,6 +115,21 @@ let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GC
       arrayOfCars.unshift('Porche')
       console.log(arrayOfCars)
 
+    // REVERSE
+    // reverse the element in an array in place.
+      arrayOfCars.reverse()
+      console.log(arrayOfCars)
+
+    // JOIN
+    // adds all element of an array into a string,sepereated by a specified seperator string.
+      arrayofVehicle = arrayOfCars.join('/ ')
+      console.log(arrayofVehicle)
+
+    // CONCATENATE
+    // combines two or more arrays.
+    arrayofVehicle = arrayOfCars.concat(arrayOfAge)
+      console.log(arrayofVehicle)
+
       // ASSIGNMENT
       /* 
       create array of object with 3 users(password and email)
@@ -116,7 +137,7 @@ let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GC
       alert('password is correct', 'not correct)
       alert('Welcome user') when successful
       */
-
+/*
       const users = [
         { email: 'user1@gmail.com', password: 'password1' },
         { email: 'user2@gmail.com', password: 'password2' },
@@ -143,4 +164,12 @@ let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GC
       }
       
       verifyUser()
-      
+      */
+
+    // ASSIGNMENT
+    // write an article
+
+    //first member (talk about array in whole) 'Ahmad'
+    //second member(talk about array methods) 'Precious'
+    //both give a conclusion.
+    // combine and post, on hashnode
