@@ -160,3 +160,65 @@ for (let i = 0; i < 5; i++) {
   - The inner loop iterates from 0 to i (the current row number), adding an asterisk and a space to the row string on each iteration.
   - After the inner loop completes, the row string is printed to the console using console.log(row).
 */
+
+// Assignment
+// write a function that can identify the index of an item in the array of books. 
+// using the index, it should return the name and the year of the book (name of the book is , published in [year]).
+
+// The Book Database
+
+let bookDb = [
+      {
+        bookName: 'Chronicles of Nania',
+        year: '1990',
+        id: 1
+      },
+      {
+        bookName: 'Secret of a secret place',
+        year: '2004',
+        id: 2
+      },
+      {
+        bookName: 'Arrow of god',
+        year: '1980',
+        id: 3
+      },
+      {
+        bookName: 'Multipurpose',
+        year: '2000',
+        id: 4
+      },
+      {
+        bookName: 'Atomic Habits',
+        year: '2004',
+        id: 5
+      },
+      {
+        bookName: 'Purple Hibiscus',
+        year: '2003',
+        id: 6
+      }
+    ]
+
+
+    function getBookInfo(index) {
+      if (index >= 0 && index < bookDb.length && Number.isInteger(index)) {
+        const book = bookDb[index]
+        return `The name of book is ${book.bookName} and it was published in the year ${book.year}.`
+      } else {
+        return `Invalid index. Please enter a whole number between 0 and ${bookDb.length - 1}.`
+      }
+    }
+    
+    // Get user input and validate
+    while (true) {
+      let inputIndex = parseInt(prompt('Enter the index of the book'))
+      
+      if (!isNaN(inputIndex)) {
+        console.log(getBookInfo(inputIndex))
+        break
+      } else {
+        console.log('Invalid input. Please enter a number.')
+      }
+    }
+    

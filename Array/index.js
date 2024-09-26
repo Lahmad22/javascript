@@ -130,6 +130,45 @@ let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GC
     arrayofVehicle = arrayOfCars.concat(arrayOfAge)
       console.log(arrayofVehicle)
 
+    // FINDINDEX
+    // Finds the index of an item in an array
+
+// A Database
+let bookDb = [
+      {
+        bookName: 'Chronicles of Nania',
+        year: '1990',
+        id: 1
+      },
+      {
+        bookName: 'Secret of a secret place',
+        year: '2004',
+        id: 2
+      },
+      {
+        bookName: 'Arrow of god',
+        year: '1980',
+        id: 3
+      },
+      {
+        bookName: 'Multipurpose',
+        year: '2000',
+        id: 4
+      },
+      {
+        bookName: 'Atomic Habits',
+        year: '2004',
+        id: 5
+      },
+      {
+        bookName: 'Purple Hibiscus',
+        year: '2003',
+        id: 6
+      }
+    ]
+    console.log(bookDb[4].bookName)
+
+
       // ASSIGNMENT
       /* 
       create array of object with 3 users(password and email)
@@ -173,3 +212,46 @@ let arrayOfCars = ['Mercedes Benz', 'Tesla Model 3', 'Range Rover', 'Mercedes GC
     //second member(talk about array methods) 'Precious'
     //both give a conclusion.
     // combine and post, on hashnode
+
+    // ARRAY FILTERING AND REDUCE
+    // filtering(): Creates a new array with all elements that pass the test implemented by the provided function.
+    // Reduce(): Executes a reducer function on each element of the array, resulting in a single output value.
+
+// Assignment
+// write a function that can identify the index of an item in the array above 
+// using the index, it should return the name and the year of the book (name of the book is , published in [year]).
+
+// 1
+
+/*
+function arrayfunction(indexNum){
+  return `the ${bookDb[indexNum].bookName} was published in the year ${bookDb[indexNum].year}`
+}
+let inputIndex = parseFloat(prompt("Enter the index of the book"))
+console.log(arrayfunction(inputIndex))
+*/
+
+// 2
+
+//Function to retrieve book information by index
+function getBookInfo(index) {
+  if (index >= 0 && index < bookDb.length && Number.isInteger(index)) {
+    const book = bookDb[index]
+    return `The name of book is ${book.bookName} and it was published in the year ${book.year}.`
+  } else {
+    return `Invalid index. Please enter a whole number between 0 and ${bookDb.length - 1}.`
+  }
+}
+
+// Get user input and validate
+while (true) {
+  let inputIndex = parseInt(prompt('Enter the index of the book'))
+  
+  if (!isNaN(inputIndex)) {
+    console.log(getBookInfo(inputIndex))
+    break
+  } else {
+    console.log('Invalid input. Please enter a number.')
+  }
+}
+
